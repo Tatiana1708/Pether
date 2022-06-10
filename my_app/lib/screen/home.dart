@@ -114,7 +114,12 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10.0),
-                      // boxShadow: ,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 5.0,
+                        ),
+                      ],
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -218,6 +223,10 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           height: 10,
                         ),
+                        const Divider(
+                          color: Colors.grey,
+                          thickness: 1,
+                        ),
                         Container(
                           margin: EdgeInsets.only(left: 62.0),
                           child: Row(
@@ -244,130 +253,130 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(30.0, 200.0, 30.0, 16.0),
-              child: Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    margin: EdgeInsets.only(top: 210.0),
-                    decoration: BoxDecoration(
-                      color: Color.fromRGBO(28, 107, 152, 1),
-                      borderRadius: BorderRadius.circular(10.0),
-                      // boxShadow: ,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          // margin: EdgeInsets.only(left: 96.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your latest claim',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 22),
-                              ),
-                            ],
-                          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(30.0, 200.0, 30.0, 16.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        margin: EdgeInsets.only(top: 210.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(28, 107, 152, 1),
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                      ],
-                    ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.search,
+                                  color: Colors.white,
+                                  size: 45,
+                                ),
+                                Text(
+                                  'Find a service provider',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(width: 5),
+                Container(
+                  margin: EdgeInsets.fromLTRB(30.0, 200.0, 30.0, 16.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        margin: EdgeInsets.only(top: 210.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(28, 107, 152, 1),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.post_add_rounded,
+                                  color: Colors.white,
+                                  size: 45,
+                                ),
+                                Text(
+                                  'Submit a claim',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(30.0, 200.0, 30.0, 16.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        margin: EdgeInsets.only(top: 315.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(28, 107, 152, 1),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.fmd_good_rounded,
+                                  color: Colors.white,
+                                  size: 45,
+                                ),
+                                Text(
+                                  'Consult visits',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
     );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-        backgroundColor: const Color.fromRGBO(28, 107, 152, 1),
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        toolbarHeight: 209,
-        flexibleSpace: Container(
-          color: const Color.fromRGBO(28, 107, 152, 1),
-          child: Column(children: [
-            Expanded(
-                child: Column(children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Image(image: AssetImage('assets/images/GLICO.png')),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Hello, ',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Johnathan',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
-              ),
-            ])),
-            Padding(
-              padding: EdgeInsets.only(left: 10),
-              child: Row(children: [
-                Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(6.0),
-                        child: Text(
-                          'MembersShip ID:',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(4.0),
-                        child: Text(
-                          '01-XHKA00013',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(4.0),
-                        child: Text(
-                          'Validity period:',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(4.0),
-                        child: Text(
-                          '2019-04-01 / 2031-03-01',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ])
-              ]),
-            ),
-          ]),
-        ));
   }
 }
