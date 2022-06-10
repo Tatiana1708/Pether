@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black,
-                          blurRadius: 5.0,
+                          blurRadius: 3.0,
                         ),
                       ],
                     ),
@@ -263,7 +263,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Container(
                         padding: EdgeInsets.all(10.0),
-                        margin: EdgeInsets.only(top: 210.0),
+                        margin: EdgeInsets.only(top: 215.0),
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(28, 107, 152, 1),
                           borderRadius: BorderRadius.circular(10.0),

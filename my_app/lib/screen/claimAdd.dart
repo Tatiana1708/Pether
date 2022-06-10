@@ -1,12 +1,26 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:my_app/components/docDialog.dart';
 
 class ClaimAdd extends StatelessWidget {
   const ClaimAdd({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    void showDocDialog() {
+      showDialog(
+        context: context,
+        builder: (_) {
+          return AlertDialog(
+            content: AddDocDialog(),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          );
+        },
+      );
+    }
+
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -45,7 +59,7 @@ class ClaimAdd extends StatelessWidget {
                       child: Text("CLAIMS"),
                     ),
                     Container(
-                      child: Text("DOCUMENTS"),
+                      child: showDocDialog(),
                     ),
                   ]),
                 ),
@@ -53,6 +67,17 @@ class ClaimAdd extends StatelessWidget {
             ],
           ),
         ),
+        // floatingActionButton: FloatingActionButton(
+        //   elevation: 20,
+        //   backgroundColor: Colors.blue,
+        //   foregroundColor: Colors.white,
+        //   child: Icon(
+        //     Icons.feed_rounded,
+        //   ),
+        //   onPressed: () {
+        //     showDocDialog();
+        //   },
+        // ),
       ),
     );
   }

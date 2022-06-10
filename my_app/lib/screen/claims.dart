@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_app/components/body.dart';
+import 'package:my_app/components/docDialog.dart';
 import 'package:my_app/screen/claimAdd.dart';
 
 class ClaimPage extends StatelessWidget {
@@ -20,9 +21,7 @@ class ClaimPage extends StatelessWidget {
         child: Icon(
           Icons.feed_rounded,
         ),
-        onPressed: () {
-          ClaimAdd();
-        },
+        onPressed: () {},
       ),
     );
   }
