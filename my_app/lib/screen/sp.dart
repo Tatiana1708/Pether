@@ -3,15 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/addClaim.dart';
 import 'package:my_app/components/addDoc.dart';
+import 'package:my_app/components/listBatch.dart';
 
-class ClaimAdd extends StatefulWidget {
-  const ClaimAdd({Key? key}) : super(key: key);
+class ServiceProvider extends StatefulWidget {
+  const ServiceProvider({Key? key}) : super(key: key);
 
   @override
-  State<ClaimAdd> createState() => _ClaimAddState();
+  State<ServiceProvider> createState() => _ServiceProviderState();
 }
 
-class _ClaimAddState extends State<ClaimAdd> {
+class _ServiceProviderState extends State<ServiceProvider> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -20,7 +21,7 @@ class _ClaimAddState extends State<ClaimAdd> {
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(28, 107, 152, 1),
           elevation: 0,
-          // leading: Icon(Icons.arrow_back_ios),
+          leading: Icon(Icons.arrow_back_ios),
           title: const Text('Claims'),
           centerTitle: false,
           actions: [
@@ -46,7 +47,7 @@ class _ClaimAddState extends State<ClaimAdd> {
                 child: Container(
                   child: TabBarView(children: [
                     Container(
-                      child: Center(child: Text("Batch Code")),
+                      child: Center(child: ListBatch()),
                     ),
                     Container(
                       color: Colors.grey,

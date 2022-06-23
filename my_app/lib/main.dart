@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screen/claimAdd.dart';
 import 'package:my_app/screen/claims.dart';
-import 'package:my_app/screen/home.dart';
+import 'package:my_app/screen/home1.dart';
+import 'package:my_app/screen/more.dart';
+import 'package:my_app/screen/profile.dart';
+import 'package:my_app/screen/sp.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -19,10 +21,11 @@ class _MyAppState extends State<MyApp> {
 
   //list of widgets to call ontap
   final widgetOptions = [
-    const HomePage(),
+    const Home1(),
+    const ServiceProvider(),
     const ClaimPage(),
-    const ClaimPage(),
-    const ClaimAdd(),
+    const ProfilePage(),
+    const MorePage(),
   ];
 
   void _updateIndex(int value) {
@@ -55,7 +58,8 @@ class _MyAppState extends State<MyApp> {
             icon: Icon(Icons.article_outlined), label: "Claims"),
         BottomNavigationBarItem(
             icon: Icon(Icons.person_outline_sharp), label: "Profile"),
-        BottomNavigationBarItem(icon: Icon(Icons.more_vert), label: "More"),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.pending_outlined), label: "More"), //pending_outlined
       ],
     );
   }
