@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:my_app/components/theme/color.dart';
 
 class Home1 extends StatelessWidget {
   const Home1({Key? key}) : super(key: key);
@@ -14,9 +16,10 @@ class Home1 extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
+              right: 0,
               child: Container(
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(28, 107, 152, 1),
+                    color: Palette.primaryColor,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10))),
@@ -25,7 +28,7 @@ class Home1 extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 52),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -42,11 +45,12 @@ class Home1 extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          'Hello,',
+                          // 'Hello,',
+                          AppLocalizations.of(context)!.pushCounterText,
                           style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                         Text(
-                          'Jonathan',
+                          ', Jonathan',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 24,
@@ -66,7 +70,8 @@ class Home1 extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'MemberShip ID :',
+                                // 'MemberShip ID :',
+                                AppLocalizations.of(context)!.text2,
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12),
                               ),
@@ -94,7 +99,8 @@ class Home1 extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Validity period :',
+                                // 'Validity period :',
+                                AppLocalizations.of(context)!.text3,
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 12),
                               ),
@@ -117,8 +123,10 @@ class Home1 extends StatelessWidget {
           ],
         ),
         Container(
-          height: 228,
-          width: 316,
+          // height: 228,
+          // width: 316,
+          height: MediaQuery.of(context).size.height / 3,
+          width: MediaQuery.of(context).size.width / 1,
           margin: EdgeInsets.only(left: 30, top: 220, right: 29),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -137,9 +145,10 @@ class Home1 extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Your latest claim',
-                      style: TextStyle(
-                          color: Color.fromRGBO(28, 107, 152, 1), fontSize: 22),
+                      // 'Your latest claim',
+                      AppLocalizations.of(context)!.text,
+                      style:
+                          TextStyle(color: Palette.primaryColor, fontSize: 22),
                     ),
                   ],
                 ),
@@ -154,9 +163,12 @@ class Home1 extends StatelessWidget {
                       left: 18,
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Voucher no.',
+                          // 'Voucher no.',
+                          AppLocalizations.of(context)!.text4,
                           style: TextStyle(
                               color: Color.fromARGB(141, 107, 110, 112),
                               fontSize: 14),
@@ -171,11 +183,14 @@ class Home1 extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 69),
+                    padding: const EdgeInsets.only(left: 74),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Submit date',
+                          // 'Submit date',
+                          AppLocalizations.of(context)!.text5,
                           style: TextStyle(
                               color: Color.fromARGB(141, 107, 110, 112),
                               fontSize: 14),
@@ -196,15 +211,19 @@ class Home1 extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 18, top: 17, bottom: 10),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Benefit item',
+                          // 'Benefit item',
+                          AppLocalizations.of(context)!.text6,
                           style: TextStyle(
                               color: Color.fromARGB(141, 107, 110, 112),
                               fontSize: 14),
                         ),
                         Text(
-                          'Specialist',
+                          // 'Specialist',
+                          AppLocalizations.of(context)!.text7,
                           style: TextStyle(
                               color: Color.fromARGB(255, 139, 143, 145),
                               fontSize: 14),
@@ -215,9 +234,12 @@ class Home1 extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 74, top: 17, bottom: 10),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Claim status',
+                          // 'Claim status',
+                          AppLocalizations.of(context)!.text8,
                           style: TextStyle(
                               color: Color.fromARGB(141, 107, 110, 112),
                               fontSize: 14),
@@ -225,7 +247,8 @@ class Home1 extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              'Processing',
+                              // 'Processing',
+                              AppLocalizations.of(context)!.text9,
                               style: TextStyle(
                                   color: Color.fromARGB(255, 139, 143, 145),
                                   fontSize: 14),
@@ -259,15 +282,15 @@ class Home1 extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'View details',
+                          // 'View details',
+                          AppLocalizations.of(context)!.text1,
                           style: TextStyle(
-                              color: Color.fromRGBO(28, 107, 152, 1),
-                              fontSize: 22),
+                              color: Palette.primaryColor, fontSize: 22),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 13),
+                          padding: const EdgeInsets.only(left: 15),
                           child: Icon(Icons.arrow_forward_ios,
-                              color: Color.fromRGBO(28, 107, 152, 1)),
+                              color: Palette.primaryColor),
                         ),
                       ],
                     ),
@@ -286,7 +309,7 @@ class Home1 extends StatelessWidget {
               width: 116,
               margin: EdgeInsets.only(left: 46, top: 462),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(28, 107, 152, 1),
+                color: Palette.primaryColor,
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Row(
@@ -321,7 +344,7 @@ class Home1 extends StatelessWidget {
               width: 116,
               margin: EdgeInsets.only(left: 48, top: 462, right: 49),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(28, 107, 152, 1),
+                color: Palette.primaryColor,
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Row(
@@ -353,47 +376,47 @@ class Home1 extends StatelessWidget {
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 108,
-              width: 116,
-              margin: EdgeInsets.only(left: 128, top: 594, right: 131),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(28, 107, 152, 1),
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.fmd_good_rounded,
-                        color: Colors.white,
-                        size: 45,
-                      ),
-                      Positioned(
-                        height: 16,
-                        width: 85,
-                        child: Text(
-                          'Consult visits',
-                          style: TextStyle(color: Colors.white, fontSize: 14),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   children: [
+        //     Container(
+        //       height: 108,
+        //       width: 116,
+        //       margin: EdgeInsets.only(left: 128, top: 594, right: 131),
+        //       decoration: BoxDecoration(
+        //         color: Palette.primaryColor,
+        //         borderRadius: BorderRadius.circular(15.0),
+        //       ),
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.center,
+        //         crossAxisAlignment: CrossAxisAlignment.center,
+        //         children: [
+        //           Column(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             crossAxisAlignment: CrossAxisAlignment.center,
+        //             children: [
+        //               Icon(
+        //                 Icons.fmd_good_rounded,
+        //                 color: Colors.white,
+        //                 size: 45,
+        //               ),
+        //               Positioned(
+        //                 height: 16,
+        //                 width: 85,
+        //                 child: Text(
+        //                   'Consult visits',
+        //                   style: TextStyle(color: Colors.white, fontSize: 14),
+        //                   textAlign: TextAlign.center,
+        //                 ),
+        //               ),
+        //             ],
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ],
     );
   }
