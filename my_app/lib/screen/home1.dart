@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:my_app/components/theme/color.dart';
+import 'package:my_app/screen/claimAdd.dart';
 
 class Home1 extends StatelessWidget {
   const Home1({Key? key}) : super(key: key);
@@ -123,10 +124,8 @@ class Home1 extends StatelessWidget {
           ],
         ),
         Container(
-          // height: 228,
-          // width: 316,
           height: MediaQuery.of(context).size.height / 3,
-          width: MediaQuery.of(context).size.width / 1,
+          width: MediaQuery.of(context).size.width,
           margin: EdgeInsets.only(left: 30, top: 220, right: 29),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -135,6 +134,7 @@ class Home1 extends StatelessWidget {
               BoxShadow(
                 color: Color.fromARGB(0, 25, 25, 26),
                 blurRadius: 10.0,
+                spreadRadius: 10.0,
               ),
             ],
           ),
@@ -164,7 +164,7 @@ class Home1 extends StatelessWidget {
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           // 'Voucher no.',
@@ -186,7 +186,7 @@ class Home1 extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 74),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           // 'Submit date',
@@ -212,7 +212,7 @@ class Home1 extends StatelessWidget {
                     padding: EdgeInsets.only(left: 18, top: 17, bottom: 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           // 'Benefit item',
@@ -235,7 +235,7 @@ class Home1 extends StatelessWidget {
                     padding: EdgeInsets.only(left: 74, top: 17, bottom: 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           // 'Claim status',
@@ -260,7 +260,7 @@ class Home1 extends StatelessWidget {
                                 width: 16,
                                 decoration: BoxDecoration(
                                   color: Color.fromRGBO(250, 241, 158, 1),
-                                  borderRadius: BorderRadius.circular(20.0),
+                                  shape: BoxShape.circle,
                                 ),
                               ),
                             ),
@@ -280,6 +280,7 @@ class Home1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 18),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           // 'View details',
@@ -304,40 +305,40 @@ class Home1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 108,
-              width: 116,
-              margin: EdgeInsets.only(left: 46, top: 462),
-              decoration: BoxDecoration(
-                color: Palette.primaryColor,
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.search,
-                        color: Colors.white,
-                        size: 45,
-                      ),
-                      SizedBox(
-                        height: 32,
-                        width: 91,
-                        child: Text(
-                          'Find a service provider',
-                          style: TextStyle(color: Colors.white, fontSize: 14),
-                          textAlign: TextAlign.center,
+              Container(
+                height: 108,
+                width: 116,
+                margin: EdgeInsets.only(left: 46, top: 462),
+                decoration: BoxDecoration(
+                  color: Palette.primaryColor,
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.search,
+                          color: Colors.white,
+                          size: 45,
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                        SizedBox(
+                          height: 32,
+                          width: 91,
+                          child: Text(
+                            'Find a service provider',
+                            style: TextStyle(color: Colors.white, fontSize: 14),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
             ),
             Container(
               height: 108,
@@ -347,6 +348,16 @@ class Home1 extends StatelessWidget {
                 color: Palette.primaryColor,
                 borderRadius: BorderRadius.circular(15.0),
               ),
+              child: 
+              InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ClaimAdd(),
+                  ),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -373,50 +384,51 @@ class Home1 extends StatelessWidget {
                   ),
                 ],
               ),
+              ),
             ),
           ],
         ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: [
-        //     Container(
-        //       height: 108,
-        //       width: 116,
-        //       margin: EdgeInsets.only(left: 128, top: 594, right: 131),
-        //       decoration: BoxDecoration(
-        //         color: Palette.primaryColor,
-        //         borderRadius: BorderRadius.circular(15.0),
-        //       ),
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.center,
-        //         crossAxisAlignment: CrossAxisAlignment.center,
-        //         children: [
-        //           Column(
-        //             mainAxisAlignment: MainAxisAlignment.center,
-        //             crossAxisAlignment: CrossAxisAlignment.center,
-        //             children: [
-        //               Icon(
-        //                 Icons.fmd_good_rounded,
-        //                 color: Colors.white,
-        //                 size: 45,
-        //               ),
-        //               Positioned(
-        //                 height: 16,
-        //                 width: 85,
-        //                 child: Text(
-        //                   'Consult visits',
-        //                   style: TextStyle(color: Colors.white, fontSize: 14),
-        //                   textAlign: TextAlign.center,
-        //                 ),
-        //               ),
-        //             ],
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //   ],
-        // ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              height: 108,
+              width: 116,
+              margin: EdgeInsets.only(left: 128, top: 594, right: 131),
+              decoration: BoxDecoration(
+                color: Palette.primaryColor,
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.fmd_good_rounded,
+                        color: Colors.white,
+                        size: 45,
+                      ),
+                      Positioned(
+                        height: 16,
+                        width: 85,
+                        child: Text(
+                          'Consult visits',
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

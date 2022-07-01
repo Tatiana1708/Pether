@@ -17,7 +17,6 @@ class HomePage extends StatelessWidget {
               height: 250,
               width: double.infinity,
               child: Container(
-                  // margin: EdgeInsets.only(bottom: 20),
                   color: const Color.fromRGBO(28, 107, 152, 1),
                   child: Column(children: [
                     Expanded(
@@ -358,7 +357,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: 110,
                   height: 100,
-                  margin: EdgeInsets.fromLTRB(30.0, 530.0, 30.0, 20.0),
+                  margin: EdgeInsets.fromLTRB(30.0, 510.0, 30.0, 20.0),
                   child: Column(
                     children: [
                       Container(
