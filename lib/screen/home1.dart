@@ -25,7 +25,7 @@ class Home1 extends StatelessWidget {
                         bottomLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10))),
                 height: MediaQuery.of(context).size.height / 3,
-                width: MediaQuery.of(context).size.width / 1,
+                width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
                     Padding(
@@ -388,47 +388,47 @@ class Home1 extends StatelessWidget {
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 108,
-              width: 116,
-              margin: EdgeInsets.only(left: 128, top: 594, right: 131),
-              decoration: BoxDecoration(
-                color: Palette.primaryColor,
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.fmd_good_rounded,
-                        color: Colors.white,
-                        size: 45,
-                      ),
-                      Positioned(
-                        height: 16,
-                        width: 85,
-                        child: Text(
-                          'Consult visits',
-                          style: TextStyle(color: Colors.white, fontSize: 14),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   children: [
+        //     Container(
+        //       height: 108,
+        //       width: 116,
+        //       margin: EdgeInsets.only(left: 128, top: 594, right: 131),
+        //       decoration: BoxDecoration(
+        //         color: Palette.primaryColor,
+        //         borderRadius: BorderRadius.circular(15.0),
+        //       ),
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.center,
+        //         crossAxisAlignment: CrossAxisAlignment.center,
+        //         children: [
+        //           Column(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             crossAxisAlignment: CrossAxisAlignment.center,
+        //             children: [
+        //               Icon(
+        //                 Icons.fmd_good_rounded,
+        //                 color: Colors.white,
+        //                 size: 45,
+        //               ),
+        //               Positioned(
+        //                 height: 16,
+        //                 width: 85,
+        //                 child: Text(
+        //                   'Consult visits',
+        //                   style: TextStyle(color: Colors.white, fontSize: 14),
+        //                   textAlign: TextAlign.center,
+        //                 ),
+        //               ),
+        //             ],
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ],
     );
   }

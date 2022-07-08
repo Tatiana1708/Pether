@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/addClaim.dart';
 import 'package:my_app/components/addDoc.dart';
+import 'package:my_app/components/addSP.dart';
 import 'package:my_app/components/listBatch.dart';
 
 class ServiceProvider extends StatefulWidget {
@@ -26,8 +27,16 @@ class _ServiceProviderState extends State<ServiceProvider> {
           centerTitle: false,
           actions: [
             Icon(Icons.search),
-            SizedBox(width: 20),
-            Icon(Icons.replay)
+            SizedBox(width: 10),
+            IconButton(
+              icon: Icon(Icons.more_vert),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddSP()),
+                );
+              },
+            )
           ],
         ),
         body: DefaultTabController(
